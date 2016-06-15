@@ -59,6 +59,91 @@
       <p><strong>Car: </strong>Jelly cotton candy bonbon jelly-o jelly-o I love. I love sugar plum chocolate cake pie I love pastry liquorice.</p>
     </div><!--/.tertiary-->
 
+    <ul>
+    <div class ='svg'>
+<h2>SVG: Animate, Clip, Mask, Use, Filter</h2>
+<?xml version="1.0" standalone="no"?>
+<svg width="400px" height="400px" viewBox="-200 -200 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <defs>
+    <rect id="animatedRect" x="-400" y="-100" width="400" height="400">
+      <animateTransform attributeName="transform" type="rotate"
+        from="45,0,-150" to="0,0,-150"
+        begin="0s" dur="3s"
+        repeatCount="indefinite"
+        calcMode="spline" keyTimes="0;1" keySplines="0.42 0.0 0.58 1.0"
+      />
+    </rect>
+    <clipPath id="clip">
+      <use xlink:href="#animatedRect"/>
+    </clipPath>
+    <mask id="mask" maskUnits="userSpaceOnUse" x="-200" y="-10" width="400" height="400">
+      <rect x="-150" y="0" width="200" height="200" fill="hsla(255,255%,255%,1)" clip-path="url(#clip)"/>
+        </mask>
+    <g id="page">
+      <rect x="-300" y="0" width="300" height="300" fill="hsla(264, 24%, 33%, 1)"/>
+      <image xlink:href="images/dn_banner.jpg" x="-190" y="0" width="150" height="150"/>
+    </g>
+    <linearGradient id="centerGrad" x1="1" x2="0">
+      <stop offset="0" stop-color="hsla(264, 24%, 33%,1)" stop-opacity="0.3"/>
+      <stop offset="0.02" stop-color="hsla(264, 24%, 33%,1)" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feOffset in="SourceAlpha">
+        <animate attributeName="dx"
+          begin="0s" dur="3s"
+          repeatCount="indefinite"
+          calcMode="linear" keyTimes="0;0.5;1" values="0;-1;0"
+        />
+        <animate attributeName="dy"
+          begin="0s" dur="3s"
+          repeatCount="indefinite"
+          calcMode="linear" keyTimes="0;0.5;1" values="0;1;0"
+        />
+      </feOffset>
+      <feGaussianBlur>
+        <animate attributeName="stdDeviation"
+          begin="0s" dur="3s"
+          repeatCount="indefinite"
+          calcMode="linear" keyTimes="0;0.5;1" values="0;3;0"
+        />
+      </feGaussianBlur>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="-21" y="2" width="322" height="200" fill="hsla(41, 60%, 51%, 1)" rx="2" ry="2"/>
+  <rect x="-20" y="1" width="320" height="200" fill="hsla(41, 60%, 51%,1)" rx="2" ry="2"/>
+  <path d="M-150,0 L-155,5 V205 L-5,205 L0,200" fill="hsla(41, 60%, 51%, 1)"/>
+  <path d="M150,0 L155,5 V205 L5,205 L0,200" fill="hsla(41, 60%, 51%, 1)"/>
+
+  <rect x="100" width="200" height="200" fill="hsla(41, 60%, 51%, 1)"/>
+  <g font-family="ubuntu" font-size="15">
+    <text x="15" y="85">Write your next Chapter!</text>
+    <text x="45" y="110">DIVERSENOTE</text>
+    <text x="40" y="135">is here to help!</text>
+  </g>
+  <use xlink:href="#page"/>
+  <rect  x="-200" y="0" width="100" height="100" fill="url(#centerGrad)"/>
+    <g filter="url(#shadow)">
+        <g>
+            <g mask="url(#mask)">
+                <use xlink:href="#page"/>
+                <use xlink:href="#animatedRect" fill="url(#centerGrad)"/>
+            </g>
+            <animateTransform attributeName="transform" type="rotate"
+                from="-90,0,-150" to="0,0,-150"
+                begin="0s" dur="3s"
+                repeatCount="indefinite"
+                calcMode="spline" keyTimes="0;1" keySplines="0.42 0.0 0.58 1.0"/>
+        </g>
+    </g>
+</svg>
+</div>
+</ul>
+
   </div><!--/.container-->
 
   <footer class="main-footer">
