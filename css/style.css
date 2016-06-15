@@ -17,16 +17,25 @@ p {
   margin-bottom: 1.8em;
 }
 
-h2,
+h1 {
+  color: #514169;
+},
+
+h2 {
+  color: #514169;
+  },
 h3,
 a {
   color: #093a58;
 }
 
-h2,
+h2 {
+  color: #514169;
+  },
 h3,
 h4 {
   margin-top: 0;
+  color: #514169;
 }
 
 h4 {
@@ -49,15 +58,19 @@ figure {
 
 figcaption {
   font-size: .9em;
-  line-height: 1.5;
+  line-height: 1.2;
   color: #fff;
-  padding: 1em;
+  padding: .5em;
   background-color: #CF6136;
   background: rgba(207, 97, 54, .85);
 
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+#figcaption2 {
+  background: rgba(205, 157, 57,.85);
 }
 
 /* =================================
@@ -228,10 +241,7 @@ body{
   background:hsla(0,0%,0%,1);
   font-family: 'Ubuntu', sans-serif;
 }
-h2{
-  color:hsla(255,255%,255%,1);
-  font-size:1.5em;
-}
+
 .svg{
   width:100%;
   height:50%;
